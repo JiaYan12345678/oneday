@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<p>我会被改变样式</p>
+		<p>我不会被改变样式</p>
+		<script type="text/javascript">
+			document.querySelectorAll("p")[0].style.backgroundColor="blue";
+			document.querySelectorAll("p")[0].style.fontWeight="bold";
+		</script>
+	</body>
+</html>

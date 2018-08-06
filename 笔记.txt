@@ -1,0 +1,37 @@
+1:写js代码的方式有三种：
+  1.1行内：用的较少，一般用在a标签上。
+     <a href="javaScript:样式">xxxx</a>
+  1.2内部：script标签内部写js代码,标签放在要操作的元素的弟弟位子，要么上面要么下面。
+  1.3外部：1.3.1. script标签的src属性填引入的js文件
+		   1.3.2.外部引入的标签,它的标签内部不要写js代码,也是放在操作元素的弟弟位。
+		   
+2：js代码引入后的运行
+  1.加载资源
+     1.1  下载资源
+     1.1运行资源(href是把html文件翻译成界面,  script的src属性会启用浏览器的js引擎来读资源中的代码:只能读懂js代码  )
+  2.文件类型
+	js引擎读取文件,不看文件类型(文件类型)
+	文件的类型由文件的内容来决定,文件的后缀只是为了提示,接下来要使用这份文件的'人'			
+  3.按照文档流的结构顺序依次加载
+  4.代码执行按照先后顺序一行一行执行	
+   
+3:js代码给界面上的元素添加点击事件
+    document.querySelector(".div1")  //获取到了所有的class为div1的元素中的第一个(得到的就直接是标签)
+    document.querySelectorAll(".div1") //获取到了所有的class为div1的元素,必须加数组(得到的是一个数组容器,容器里取出标签就行了:xxx[0])
+    
+4：添加事件
+	选取元素.元素.事件名=函数
+	事件名有:onclick 、  onmouseentter等等
+	元素.onclick=function(){  
+	          写业务代码:只有事件触发了才会执行大括号里面的代码
+}
+		
+		
+  写业务:
+	1.如何js给元素改变css样式 :元素.属性="值"    (xxxx代表选取元素document.querySelector())
+	xxxdiv1.id="div2"    xxxdiv1.style.width="200px"
+		
+	2.如何用js给元素加内容(HTML开始标签和结尾标签里面的内容)  
+		 xxxdiv1.innerHTML="hello"   
+		 xxxdiv1.innerHTML="< 标签名 >hello< / 标签名 >"  会把标签翻译
+		 xxxxinpu1.value="7777"
